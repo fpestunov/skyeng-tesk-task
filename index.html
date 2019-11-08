@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Task</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="content">
+  <div class="container round-large white shadow" style="margin:100px;">
+    <div class="row mt-20 mx-20">
+      <div class="one-third center round-large hover-grey pointer" onclick="document.getElementById('id01').style.display='block'">
+        <div class=" mx-20">
+          <img src="./img/device.svg" width="64" height="64" alt="Mobile" class="my-20">
+          <h2 class="indigo font-uppercase font-bold text-wide">Mobile</h2>
+          <p class="text">Get notifications about new releases in our mobile app.</p>
+          <p class="text-price"><span class="text-big"><sup>$</sup>10</span> / month</p>
+        </div>
+      </div>
+      <div class="one-third center round-large hover-grey pointer" onclick="document.getElementById('id02').style.display='block'">
+        <div class=" mx-20">
+          <img src="./img/laptop.svg" width="64" height="64" alt="Mobile" class="my-20">
+          <h2 class="indigo font-uppercase font-bold text-wide">Desktop</h2>
+          <p class="text">Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+          <p class="text-price"><span class="text-big"><sup>$</sup>15</span> / month</p>
+        </div>
+      </div>
+      <div class="one-third center round-large hover-grey pointer" onclick="document.getElementById('id03').style.display='block'">
+        <div class=" mx-20">
+          <img src="./img/monitor.svg" width="64" height="64" alt="Monitor" class="my-20">
+          <h2 class="indigo font-uppercase font-bold text-wide">Tv</h2>
+          <p class="text">Watch your favorite series at home on large screen with our TV application.</p>
+          <p class="text-price"><span class="text-big"><sup>$</sup>20</span> / month</p>
+        </div>
+      </div>
+    </div>
+    <div class="row center my-20">
+      <button class="button round dark-blue">Give feedback</button>
+    </div>
+  </div>
+  <!-- Modals -->
+  <div id="id01" class="modal">
+    <div class="modal-content round">
+      <div class="container center">
+        <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright"><img src="./img/cross.svg" width="24" height="24"></span>
+        <div class="px-15">
+          <h3 class="font-bold">Confirmation</h2>
+            <img src="./img/device.svg" width="64" height="64" alt="Mobile" class="my-20">
+            <h2 class="indigo font-uppercase font-bold text-wide">Mobile</h2>
+            <p class="text">Get notifications about new releases in our mobile app.</p>
+            <p class="text-price"><span class="text-big"><sup>$</sup>10</span> / month</p>
+        </div>
+        <button class="button round dark-blue mb-20">Confirm and pay</button>
+      </div>
+    </div>
+  </div>
+  <div id="id02" class="modal">
+    <div class="modal-content round">
+      <div class="container center">
+        <span onclick="document.getElementById('id02').style.display='none'" class="button display-topright"><img src="./img/cross.svg" width="24" height="24"></span>
+        <div class="px-15">
+          <h3 class="font-bold">Confirmation</h2>
+            <img src="./img/laptop.svg" width="64" height="64" alt="Mobile" class="my-20">
+            <h2 class="indigo font-uppercase font-bold text-wide">Desktop</h2>
+            <p class="text">Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+            <p class="text-price"><span class="text-big"><sup>$</sup>15</span> / month</p>
+        </div>
+        <button class="button round dark-blue mb-20">Confirm and pay</button>
+      </div>
+    </div>
+  </div>
+  <div id="id03" class="modal">
+    <div class="modal-content round">
+      <div class="container center">
+        <span onclick="document.getElementById('id03').style.display='none'" class="button display-topright"><img src="./img/cross.svg" width="24" height="24"></span>
+        <div class="px-15">
+          <h3 class="font-bold">Confirmation</h2>
+            <img src="./img/monitor.svg" width="64" height="64" alt="Monitor" class="my-20">
+            <h2 class="indigo font-uppercase font-bold text-wide">Tv</h2>
+            <p class="text">Watch your favorite series at home on large screen with our TV application.</p>
+            <p class="text-price"><span class="text-big"><sup>$</sup>20</span> / month</p>
+        </div>
+        <button class="button round dark-blue mb-20">Confirm and pay</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
