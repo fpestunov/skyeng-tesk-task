@@ -96,3 +96,53 @@ function bigsum(string $a, string $b): string
 
     return $sum;
 }
+
+/**
+ * Проверка корректности введенных чисел
+ * 
+ * @param array $numbers
+ *
+ * @return array Массив с описанием ошибок
+ */
+function validateNumbers($numbers)
+{
+    $errors = [];
+    $a = trim($numbers['a']);
+    $b = trim($numbers['b']);
+
+    // проверка пустых чисел
+    if (empty($a)) {
+        $errors['a'] = 'Число не может быть пустым';
+    }
+
+    if (empty($b)) {
+        $errors['b'] = 'Число не может быть пустым';
+    }
+
+    if (count($errors)) {
+        return $errors;
+    }
+
+    // проверка отрицательных чисел
+    if ($a[0] === '-') {
+        $errors['a'] = 'Число не может быть отрицательным';
+    }
+
+    if ($b[0] === '-') {
+        $errors['b'] = 'Число не может быть отрицательным';
+    }
+
+    return $errors;
+}
+
+/**
+ * Очищает пользовательский ввод
+ * 
+ * @param string $s Строка полученная от пользователя
+ *
+ * @return string Очищенная строка
+ */
+function esc($s)
+{
+    return htmlspecialchars($s);
+}
