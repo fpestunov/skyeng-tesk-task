@@ -12,7 +12,7 @@
 <body class="content">
   <div class="container round-large white shadow" style="margin:100px;">
     <div class="row mt-20 mx-20">
-      <div class="one-third center round-large hover-grey pointer" onclick="document.getElementById('id01').style.display='block'">
+      <div class="one-third center round-large hover-grey pointer" onclick="showModal('id01')">
         <div class=" mx-20">
           <img src="./img/device.svg" width="64" height="64" alt="Mobile" class="my-20">
           <h2 class="indigo font-uppercase font-bold text-wide">Mobile</h2>
@@ -20,7 +20,7 @@
           <p class="text-price"><span class="text-big"><sup>$</sup>10</span> / month</p>
         </div>
       </div>
-      <div class="one-third center round-large hover-grey pointer" onclick="document.getElementById('id02').style.display='block'">
+      <div class="one-third center round-large hover-grey pointer" onclick="showModal('id02')">
         <div class=" mx-20">
           <img src="./img/laptop.svg" width="64" height="64" alt="Mobile" class="my-20">
           <h2 class="indigo font-uppercase font-bold text-wide">Desktop</h2>
@@ -28,7 +28,7 @@
           <p class="text-price"><span class="text-big"><sup>$</sup>15</span> / month</p>
         </div>
       </div>
-      <div class="one-third center round-large hover-grey pointer" onclick="document.getElementById('id03').style.display='block'">
+      <div class="one-third center round-large hover-grey pointer" onclick="showModal('id03')">
         <div class=" mx-20">
           <img src="./img/monitor.svg" width="64" height="64" alt="Monitor" class="my-20">
           <h2 class="indigo font-uppercase font-bold text-wide">Tv</h2>
@@ -87,6 +87,20 @@
       </div>
     </div>
   </div>
+  <script>
+  var modal;
+
+  function showModal(modalId) {
+    modal = document.getElementById(modalId);
+    modal.style.display = "block";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 </body>
 
 </html>
